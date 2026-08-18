@@ -1,28 +1,17 @@
-# Dual License Agreement for RNA2 Engine & Package Manager
-Copyright (c) SmartAscent Labs. All rights reserved.
+# SmartAscent Labs Commercial License Agreement (RNA2 Engine)
 
-This software is offered under a dual-licensing scheme managed by SmartAscent Labs depending on your use case, commercial status, and annual gross revenue.
+Copyright (c) 2026 SmartAscent Labs. All rights reserved.
 
----
+## 1. Grant of License
+SmartAscent Labs grants your organization a non-exclusive, non-transferable, worldwide license to embed, execute, and build applications utilizing the RNA2 Package Manager & Memory Engine (rna2_pm) core subject to the revenue tiers outlined below.
 
-## 1. Free Community & Personal Use License
+## 2. Pricing and Revenue Tiers
+Usage of this software is tier-based, evaluated by your organization's gross annual revenue. All commercial plans include uncapped developer seats within the licensed organization.
 
-You are granted a free, non-exclusive, non-transferable license to use, modify, and distribute this software solely for **Personal, Non-Commercial, Research, or Educational purposes**.
+* **Free Tier:** $0/month for individuals, open-source projects, and entities under $100,000 USD in gross annual revenue.
+* **Startup Plan:** $99/month flat-rate for entities generating between $100,000 USD and $1,000,000 USD in gross annual revenue.
+* **Business Plan:** $299/month flat-rate for entities generating between $1,000,000 USD and $10,000,000 USD in gross annual revenue.
+* **Enterprise Plan:** Custom licensing terms for entities exceeding $10,000,000 USD in gross annual revenue.
 
-### Terms & Conditions:
-* **Individuals & Non-Commercial Use:** Free forever.
-* **Commercial Entities & Sole Proprietors:** Free to use provided that the entity gross annual revenue (or funding) is less than `$100,000 USD in the current fiscal year.
-* Modifying source code is permitted for internal/personal use, provided the original copyright notice and SmartAscent Labs attributions remain intact.
-
----
-
-## 2. Commercial Tier License (`$100k+ Revenue)
-
-Any individual, business, enterprise, or entity whose gross annual revenue or funding equals or exceeds `$100,000 USD is required to purchase a Commercial Seat License from SmartAscent Labs.
-
-### Commercial Terms:
-* **Pricing:** `$50 USD per month per active seat (developer/operator utilizing the RNA2 C-ABI library, tools, or binary distributions).
-* **Scope:** Grants full commercial usage rights, deployment in commercial products, and access to priority maintenance provided by SmartAscent Labs.
-* **Compliance:** Failure to obtain a commercial license once the `$100,000 annual gross revenue threshold is met voids all rights under Section 1 and constitutes unauthorized use.
-
-For commercial licensing arrangements, enterprise billing, or custom terms, contact SmartAscent Labs.
+## 3. Restrictions
+You may not sub-license, rent, or lease the underlying binary engine core (rna2_pm.dll / rna2_pm.lib) as a standalone competitive SDK or archive utility to third parties without prior written consent from SmartAscent Labs.
