@@ -12,6 +12,7 @@ def package_release():
     required_artifacts = [
         Path("rna2_pm.dll"),
         Path("rna2_engine.py"),
+        Path("rna2_pm.h"),
         Path("README.md"),
         Path("LICENSE.md")
     ]
