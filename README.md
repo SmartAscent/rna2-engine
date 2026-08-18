@@ -13,3 +13,4 @@ RNA2 is an embedded domain-specific archive and execution layer designed for bin
 ## Licensing
 
 Dual-licensed by SmartAscent Labs. Free for personal/non-commercial use and entities under `$100k annual revenue; `$50/month per active seat for commercial entities exceeding `$100k revenue. See LICENSE.md for details.
+
