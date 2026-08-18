@@ -1,0 +1,1 @@
+C:\Users\Administrator\Desktop\rna2\ Package\ manager\target\release\rna2_pm_cli.exe: C:\Users\Administrator\Desktop\rna2\ Package\ manager\src\lib.rs C:\Users\Administrator\Desktop\rna2\ Package\ manager\src\main.rs
