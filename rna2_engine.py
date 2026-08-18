@@ -1,155 +1,60 @@
 import ctypes
-import json
-import os
-from typing import Any, Dict, Optional
+from pathlib import Path
+from typing import Callable, Optional
 
+PROGRESS_CB_TYPE = ctypes.CFUNCTYPE(None, ctypes.c_uint64, ctypes.c_uint64, ctypes.c_char_p)
 
 class RNA2Engine:
     def __init__(self, dll_path: str = "rna2_pm.dll"):
-        if not os.path.isabs(dll_path):
-            dll_path = os.path.abspath(dll_path)
+        self.dll_path = Path(dll_path).resolve()
+        if not self.dll_path.exists():
+            raise FileNotFoundError(f"DLL not found at {self.dll_path}")
+        self.lib = ctypes.CDLL(str(self.dll_path))
 
-        if not os.path.exists(dll_path):
-            raise FileNotFoundError(f"DLL not found at: {dll_path}")
+        self.lib.rna2_pack_directory.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+        self.lib.rna2_pack_directory.restype = ctypes.c_int32
 
-        self._dll = ctypes.CDLL(dll_path)
-        self._setup_bindings()
+        self.lib.rna2_pack_directory_with_progress.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, PROGRESS_CB_TYPE]
+        self.lib.rna2_pack_directory_with_progress.restype = ctypes.c_int32
 
-    def _setup_bindings(self):
-        # rna2_get_last_error
-        self._dll.rna2_get_last_error.argtypes = []
-        self._dll.rna2_get_last_error.restype = ctypes.c_char_p
+        self.lib.rna2_unpack_directory.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
+        self.lib.rna2_unpack_directory.restype = ctypes.c_int32
 
-        # rna2_free_string
-        self._dll.rna2_free_string.argtypes = [ctypes.c_void_p]
-        self._dll.rna2_free_string.restype = None
+        self.lib.rna2_unpack_directory_with_progress.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p, PROGRESS_CB_TYPE]
+        self.lib.rna2_unpack_directory_with_progress.restype = ctypes.c_int32
 
-        # rna2_pack_dir_plain
-        self._dll.rna2_pack_dir_plain.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
-        self._dll.rna2_pack_dir_plain.restype = ctypes.c_int
-
-        # rna2_pack_dir_encrypted
-        self._dll.rna2_pack_dir_encrypted.argtypes = [
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-        ]
-        self._dll.rna2_pack_dir_encrypted.restype = ctypes.c_int
-
-        # rna2_unpack_dir_plain
-        self._dll.rna2_unpack_dir_plain.argtypes = [
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-        ]
-        self._dll.rna2_unpack_dir_plain.restype = ctypes.c_int
-
-        # rna2_unpack_dir_encrypted
-        self._dll.rna2_unpack_dir_encrypted.argtypes = [
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-        ]
-        self._dll.rna2_unpack_dir_encrypted.restype = ctypes.c_int
-
-        # rna2_export_file
-        self._dll.rna2_export_file.argtypes = [
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-        ]
-        self._dll.rna2_export_file.restype = ctypes.c_void_p
-
-        # rna2_import_file
-        self._dll.rna2_import_file.argtypes = [
-            ctypes.c_char_p,
-            ctypes.c_char_p,
-        ]
-        self._dll.rna2_import_file.restype = ctypes.c_void_p
-
-    def _get_error(self) -> str:
-        ptr = self._dll.rna2_get_last_error()
-        if ptr:
-            err_msg = ptr.decode("utf-8", errors="replace")
-            return err_msg
-        return "Unknown error"
-
-    def pack_directory(
-        self,
-        dir_path: str,
-        output_file: str,
-        passphrase: Optional[str] = None,
-    ) -> bool:
+    def pack_directory(self, dir_path: str, output_file: str, passphrase: str, progress_callback: Optional[Callable[[int, int, str], None]] = None):
         c_dir = dir_path.encode("utf-8")
         c_out = output_file.encode("utf-8")
+        c_pass = passphrase.encode("utf-8")
 
-        if passphrase:
-            c_pass = passphrase.encode("utf-8")
-            res = self._dll.rna2_pack_dir_encrypted(c_dir, c_out, c_pass)
+        if progress_callback:
+            def _internal_cb(bytes_proc, total_bytes, current_file):
+                filename = current_file.decode("utf-8", errors="replace") if current_file else ""
+                progress_callback(bytes_proc, total_bytes, filename)
+
+            c_cb = PROGRESS_CB_TYPE(_internal_cb)
+            res = self.lib.rna2_pack_directory_with_progress(c_dir, c_out, c_pass, c_cb)
         else:
-            res = self._dll.rna2_pack_dir_plain(c_dir, c_out)
+            res = self.lib.rna2_pack_directory(c_dir, c_out, c_pass)
 
         if res != 0:
-            raise RuntimeError(f"RNA2 Packing Failed: {self._get_error()}")
-        return True
+            raise RuntimeError(f"RNA2 pack directory failed with code: {res}")
 
-    def unpack_directory(
-        self,
-        package_file: str,
-        target_dir: str,
-        passphrase: Optional[str] = None,
-    ) -> int:
+    def unpack_directory(self, package_file: str, target_dir: str, passphrase: str, progress_callback: Optional[Callable[[int, int, str], None]] = None):
         c_pkg = package_file.encode("utf-8")
-        c_tgt = target_dir.encode("utf-8")
+        c_target = target_dir.encode("utf-8")
+        c_pass = passphrase.encode("utf-8")
 
-        if passphrase:
-            c_pass = passphrase.encode("utf-8")
-            res = self._dll.rna2_unpack_dir_encrypted(c_pkg, c_tgt, c_pass)
+        if progress_callback:
+            def _internal_cb(bytes_proc, total_bytes, current_file):
+                filename = current_file.decode("utf-8", errors="replace") if current_file else ""
+                progress_callback(bytes_proc, total_bytes, filename)
+
+            c_cb = PROGRESS_CB_TYPE(_internal_cb)
+            res = self.lib.rna2_unpack_directory_with_progress(c_pkg, c_target, c_pass, c_cb)
         else:
-            res = self._dll.rna2_unpack_dir_plain(c_pkg, c_tgt)
+            res = self.lib.rna2_unpack_directory(c_pkg, c_target, c_pass)
 
-        if res < 0:
-            raise RuntimeError(f"RNA2 Unpacking Failed: {self._get_error()}")
-        return res
-
-    def export_single_file(
-        self,
-        source_file: str,
-        relative_path: str,
-        passphrase: Optional[str] = None,
-    ) -> str:
-        c_src = source_file.encode("utf-8")
-        c_rel = relative_path.encode("utf-8")
-        c_pass = passphrase.encode("utf-8") if passphrase else None
-
-        raw_ptr = self._dll.rna2_export_file(c_src, c_rel, c_pass)
-        if not raw_ptr:
-            raise RuntimeError(f"RNA2 Export Failed: {self._get_error()}")
-
-        b64_str = ctypes.string_at(raw_ptr).decode("utf-8")
-        self._dll.rna2_free_string(raw_ptr)
-        return b64_str
-
-    def import_single_file(
-        self,
-        package_file: str,
-        passphrase: Optional[str] = None,
-    ) -> Dict[str, Any]:
-        c_pkg = package_file.encode("utf-8")
-        c_pass = passphrase.encode("utf-8") if passphrase else None
-
-        raw_ptr = self._dll.rna2_import_file(c_pkg, c_pass)
-        if not raw_ptr:
-            raise RuntimeError(f"RNA2 Import Failed: {self._get_error()}")
-
-        json_str = ctypes.string_at(raw_ptr).decode("utf-8")
-        self._dll.rna2_free_string(raw_ptr)
-        return json.loads(json_str)
-
-
-if __name__ == "__main__":
-    dll_location = os.path.join(os.path.dirname(__file__), "rna2_pm.dll")
-    try:
-        engine = RNA2Engine(dll_path=dll_location)
-        print("[SUCCESS] RNA2Engine initialized successfully and bound to rna2_pm.dll.")
-    except Exception as e:
-        print(f"[ERROR] Failed to initialize RNA2Engine: {e}")
+        if res != 0:
+            raise RuntimeError(f"RNA2 unpack directory failed with code: {res}")

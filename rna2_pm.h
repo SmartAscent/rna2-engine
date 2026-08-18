@@ -9,7 +9,7 @@
 #define RNA2_PM_H
 
 #include <stddef.h>
-#include <stdint.t.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,6 +29,9 @@ extern "C" {
   #endif
 #endif
 
+/* Progress Callback Function Prototype */
+typedef void (*rna2_progress_cb)(uint64_t bytes_processed, uint64_t total_bytes, const char* current_file);
+
 /* Status / Return Codes */
 typedef enum {
     RNA2_SUCCESS = 0,
@@ -39,32 +42,30 @@ typedef enum {
     RNA2_ERROR_MEMORY_ALLOCATION = -5
 } rna2_status_t;
 
-/**
- * Packs a directory into an encrypted RNA2 container archive.
- * 
- * @param dir_path Path to target input directory.
- * @param output_file Path for destination .rna2 archive file.
- * @param passphrase Null-terminated passphrase string for encryption.
- * @return RNA2_SUCCESS (0) on success, or appropriate error code.
- */
 RNA2_API int32_t rna2_pack_directory(
     const char* dir_path,
     const char* output_file,
     const char* passphrase
 );
 
-/**
- * Unpacks an encrypted RNA2 container archive into a target directory.
- * 
- * @param package_file Path to input .rna2 archive file.
- * @param target_dir Path to target destination directory.
- * @param passphrase Null-terminated passphrase string for decryption.
- * @return RNA2_SUCCESS (0) on success, or appropriate error code.
- */
+RNA2_API int32_t rna2_pack_directory_with_progress(
+    const char* dir_path,
+    const char* output_file,
+    const char* passphrase,
+    rna2_progress_cb callback
+);
+
 RNA2_API int32_t rna2_unpack_directory(
     const char* package_file,
     const char* target_dir,
     const char* passphrase
+);
+
+RNA2_API int32_t rna2_unpack_directory_with_progress(
+    const char* package_file,
+    const char* target_dir,
+    const char* passphrase,
+    rna2_progress_cb callback
 );
 
 #ifdef __cplusplus
