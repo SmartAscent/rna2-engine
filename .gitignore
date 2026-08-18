@@ -1,23 +1,4 @@
-# Rust build artifacts
-/target/
-**/*.rs.bk
-Cargo.lock
-
-# Windows compiled binaries & PDB debugging symbols
-*.dll
-*.exe
-*.lib
-*.pdb
-*.exp
-
-# Python cache & virtual environments
+release/
 __pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-env/
-
-# Test archives & temporary files
 *.rna2
-rna2_verify_*
+*.tmp
