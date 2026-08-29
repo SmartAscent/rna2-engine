@@ -75,7 +75,7 @@ class RNA2Engine:
         self.lib.rna2_get_last_error.restype  = ctypes.c_void_p
 
     def _raise_for_status(self, code: int):
-        if code == 0:
+        if code >= 0:  # negative = error; 0 = ok (pack); positive = file count (unpack)
             return
         err_ptr = self.lib.rna2_get_last_error()
         detail = None
