@@ -2,3 +2,18 @@ release/
 __pycache__/
 *.rna2
 *.tmp
+
+# --- added by rna2-engine cleanup ---
+/target/
+__pycache__/
+*.pyc
+extracted_dir/
+extracted_enc_dir/
+extracted_output/
+extracted_rand_enc/
+rna2_memory_store/
+test_dir/
+test_sample_data/
+release/
+*.rna2
+rna2_pm.dll

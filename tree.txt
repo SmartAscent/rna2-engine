@@ -1,0 +1,755 @@
+Folder PATH listing
+Volume serial number is 067F-ADF3
+C:.
+¦   .gitignore
+¦   auto_pruned_block_1.rna2
+¦   build_release.py
+¦   Cargo.lock
+¦   Cargo.toml
+¦   cli_sample.txt
+¦   cli_test.rna2
+¦   context_block.rna2
+¦   c_abi_test_block.rna2
+¦   dir_archive.rna2
+¦   enc_dir_archive.rna2
+¦   LICENSE.md
+¦   plaintext_block.rna2
+¦   plain_test.rna2
+¦   rand_enc_archive.rna2
+¦   README.md
+¦   rna2_cli.py
+¦   rna2_engine.py
+¦   rna2_pm.dll
+¦   rna2_pm.h
+¦   secure.rna2
+¦   test_output.rna2
+¦   test_rna2.py
+¦   test_vault.rna2
+¦   tree.txt
+¦   verify_rna2.py
+¦   
++---extracted_dir
+¦   ¦   file1.txt
+¦   ¦   
+¦   +---subfolder
+¦           file2.txt
+¦           
++---extracted_enc_dir
+¦   ¦   file1.txt
+¦   ¦   
+¦   +---subfolder
+¦           file2.txt
+¦           
++---extracted_output
+¦       sample.txt
+¦       
++---extracted_rand_enc
+¦   ¦   file1.txt
+¦   ¦   
+¦   +---subfolder
+¦           file2.txt
+¦           
++---release
+¦   ¦   rna2_pm_release.zip
+¦   ¦   
+¦   +---rna2_pm_dist
+¦           LICENSE.md
+¦           README.md
+¦           rna2_engine.py
+¦           rna2_pm.dll
+¦           rna2_pm.h
+¦           
++---rna2_memory_store
+¦   ¦   conf
+¦   ¦   db
+¦   ¦   
+¦   +---blobs
++---src
+¦       lib.rs
+¦       main.rs
+¦       
++---target
+¦   ¦   .rustc_info.json
+¦   ¦   CACHEDIR.TAG
+¦   ¦   
+¦   +---release
+¦       ¦   .cargo-artifact-lock
+¦       ¦   .cargo-build-lock
+¦       ¦   .cargo-lock
+¦       ¦   librna2_pm.d
+¦       ¦   librna2_pm.rlib
+¦       ¦   rna2_pm.d
+¦       ¦   rna2_pm.dll
+¦       ¦   rna2_pm.dll.exp
+¦       ¦   rna2_pm.dll.lib
+¦       ¦   rna2_pm.pdb
+¦       ¦   rna2_pm_cli.d
+¦       ¦   rna2_pm_cli.exe
+¦       ¦   rna2_pm_cli.pdb
+¦       ¦   
+¦       +---.fingerprint
+¦       ¦   +---adler2-6af71995eb2bc9cc
+¦       ¦   ¦       dep-lib-adler2
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-adler2
+¦       ¦   ¦       lib-adler2.json
+¦       ¦   ¦       
+¦       ¦   +---aead-bbccdb1dd713c159
+¦       ¦   ¦       dep-lib-aead
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-aead
+¦       ¦   ¦       lib-aead.json
+¦       ¦   ¦       
+¦       ¦   +---aes-5becd472e60e8bde
+¦       ¦   ¦       dep-lib-aes
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-aes
+¦       ¦   ¦       lib-aes.json
+¦       ¦   ¦       
+¦       ¦   +---aes-gcm-d7ecdab20ea50e7f
+¦       ¦   ¦       dep-lib-aes_gcm
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-aes_gcm
+¦       ¦   ¦       lib-aes_gcm.json
+¦       ¦   ¦       
+¦       ¦   +---block-buffer-41f5f783090671ce
+¦       ¦   ¦       dep-lib-block_buffer
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-block_buffer
+¦       ¦   ¦       lib-block_buffer.json
+¦       ¦   ¦       
+¦       ¦   +---cfg-if-a6d390c06a308e4b
+¦       ¦   ¦       dep-lib-cfg_if
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-cfg_if
+¦       ¦   ¦       lib-cfg_if.json
+¦       ¦   ¦       
+¦       ¦   +---chacha20-47ea593b4c8ac315
+¦       ¦   ¦       dep-lib-chacha20
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-chacha20
+¦       ¦   ¦       lib-chacha20.json
+¦       ¦   ¦       
+¦       ¦   +---cipher-050aefec84289409
+¦       ¦   ¦       dep-lib-cipher
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-cipher
+¦       ¦   ¦       lib-cipher.json
+¦       ¦   ¦       
+¦       ¦   +---cpufeatures-43f58f326ed10c59
+¦       ¦   ¦       dep-lib-cpufeatures
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-cpufeatures
+¦       ¦   ¦       lib-cpufeatures.json
+¦       ¦   ¦       
+¦       ¦   +---cpufeatures-850dff4571646451
+¦       ¦   ¦       dep-lib-cpufeatures
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-cpufeatures
+¦       ¦   ¦       lib-cpufeatures.json
+¦       ¦   ¦       
+¦       ¦   +---crc32fast-757f2ed9d701a4f3
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---crc32fast-a96b8d61a0248e2b
+¦       ¦   ¦       dep-lib-crc32fast
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-crc32fast
+¦       ¦   ¦       lib-crc32fast.json
+¦       ¦   ¦       
+¦       ¦   +---crc32fast-c76f1b8ab8e4bacd
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---crypto-common-ead685d7458f2c84
+¦       ¦   ¦       dep-lib-crypto_common
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-crypto_common
+¦       ¦   ¦       lib-crypto_common.json
+¦       ¦   ¦       
+¦       ¦   +---ctr-101e3d1ceb04ad59
+¦       ¦   ¦       dep-lib-ctr
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-ctr
+¦       ¦   ¦       lib-ctr.json
+¦       ¦   ¦       
+¦       ¦   +---digest-9c6551df3d715ff6
+¦       ¦   ¦       dep-lib-digest
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-digest
+¦       ¦   ¦       lib-digest.json
+¦       ¦   ¦       
+¦       ¦   +---flate2-eea9604ba69788e4
+¦       ¦   ¦       dep-lib-flate2
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-flate2
+¦       ¦   ¦       lib-flate2.json
+¦       ¦   ¦       
+¦       ¦   +---generic-array-29debd4506a9162e
+¦       ¦   ¦       dep-lib-generic_array
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-generic_array
+¦       ¦   ¦       lib-generic_array.json
+¦       ¦   ¦       
+¦       ¦   +---generic-array-9cc9e8355b3493db
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---generic-array-f5b1d73b275d8739
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---getrandom-62ca3bce9bbb1c94
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---getrandom-7880cb82b94b4f19
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---getrandom-8f17f7883a726835
+¦       ¦   ¦       dep-lib-getrandom
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-getrandom
+¦       ¦   ¦       lib-getrandom.json
+¦       ¦   ¦       
+¦       ¦   +---getrandom-d64de5b959126648
+¦       ¦   ¦       dep-lib-getrandom
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-getrandom
+¦       ¦   ¦       lib-getrandom.json
+¦       ¦   ¦       
+¦       ¦   +---ghash-611b0e34b85fed10
+¦       ¦   ¦       dep-lib-ghash
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-ghash
+¦       ¦   ¦       lib-ghash.json
+¦       ¦   ¦       
+¦       ¦   +---hmac-b25323a7197a9fc9
+¦       ¦   ¦       dep-lib-hmac
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-hmac
+¦       ¦   ¦       lib-hmac.json
+¦       ¦   ¦       
+¦       ¦   +---inout-e0df4deb7241888f
+¦       ¦   ¦       dep-lib-inout
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-inout
+¦       ¦   ¦       lib-inout.json
+¦       ¦   ¦       
+¦       ¦   +---itoa-749974bbc94b8860
+¦       ¦   ¦       dep-lib-itoa
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-itoa
+¦       ¦   ¦       lib-itoa.json
+¦       ¦   ¦       
+¦       ¦   +---memchr-a05ea49fbb5a505f
+¦       ¦   ¦       dep-lib-memchr
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-memchr
+¦       ¦   ¦       lib-memchr.json
+¦       ¦   ¦       
+¦       ¦   +---miniz_oxide-4961b8483cbddf72
+¦       ¦   ¦       dep-lib-miniz_oxide
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-miniz_oxide
+¦       ¦   ¦       lib-miniz_oxide.json
+¦       ¦   ¦       
+¦       ¦   +---opaque-debug-30aae6611a47f69f
+¦       ¦   ¦       dep-lib-opaque_debug
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-opaque_debug
+¦       ¦   ¦       lib-opaque_debug.json
+¦       ¦   ¦       
+¦       ¦   +---pbkdf2-3bf3b5e9cb1c8e13
+¦       ¦   ¦       dep-lib-pbkdf2
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-pbkdf2
+¦       ¦   ¦       lib-pbkdf2.json
+¦       ¦   ¦       
+¦       ¦   +---polyval-8ebcd119da719324
+¦       ¦   ¦       dep-lib-polyval
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-polyval
+¦       ¦   ¦       lib-polyval.json
+¦       ¦   ¦       
+¦       ¦   +---proc-macro2-43ad213c06778a44
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---proc-macro2-98f98eb5f6ded1d2
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---proc-macro2-ac267a6d6c6c7a4b
+¦       ¦   ¦       dep-lib-proc_macro2
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-proc_macro2
+¦       ¦   ¦       lib-proc_macro2.json
+¦       ¦   ¦       
+¦       ¦   +---quote-32cf4c0f88e8a600
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---quote-e9e9afa3c0b73ef4
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---quote-f9772c70c5822f10
+¦       ¦   ¦       dep-lib-quote
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-quote
+¦       ¦   ¦       lib-quote.json
+¦       ¦   ¦       
+¦       ¦   +---rand-e33e35196ab02ed9
+¦       ¦   ¦       dep-lib-rand
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-rand
+¦       ¦   ¦       lib-rand.json
+¦       ¦   ¦       
+¦       ¦   +---rand_core-05e2c129a30273c3
+¦       ¦   ¦       dep-lib-rand_core
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-rand_core
+¦       ¦   ¦       lib-rand_core.json
+¦       ¦   ¦       
+¦       ¦   +---rand_core-fe02e76bef4fa032
+¦       ¦   ¦       dep-lib-rand_core
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-rand_core
+¦       ¦   ¦       lib-rand_core.json
+¦       ¦   ¦       
+¦       ¦   +---rna2_pm-04aca67b89b2aec1
+¦       ¦   ¦       bin-rna2_pm_cli
+¦       ¦   ¦       bin-rna2_pm_cli.json
+¦       ¦   ¦       dep-bin-rna2_pm_cli
+¦       ¦   ¦       dep-lib-rna2_pm
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-rna2_pm
+¦       ¦   ¦       lib-rna2_pm.json
+¦       ¦   ¦       
+¦       ¦   +---serde-583dc03262ad7390
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---serde-eb1f262076f7e875
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---serde-f0f796d88abc358f
+¦       ¦   ¦       dep-lib-serde
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-serde
+¦       ¦   ¦       lib-serde.json
+¦       ¦   ¦       
+¦       ¦   +---serde_core-3dc2301fb74f9443
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---serde_core-4549c2c6ebfde947
+¦       ¦   ¦       dep-lib-serde_core
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-serde_core
+¦       ¦   ¦       lib-serde_core.json
+¦       ¦   ¦       
+¦       ¦   +---serde_core-cc20e9fb6a510b32
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---serde_derive-bcc5baa4ebc60d7d
+¦       ¦   ¦       dep-lib-serde_derive
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-serde_derive
+¦       ¦   ¦       lib-serde_derive.json
+¦       ¦   ¦       
+¦       ¦   +---serde_json-68658ca5f4c1b188
+¦       ¦   ¦       build-script-build-script-build
+¦       ¦   ¦       build-script-build-script-build.json
+¦       ¦   ¦       dep-build-script-build-script-build
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       
+¦       ¦   +---serde_json-a00bfdba3faeedb1
+¦       ¦   ¦       dep-lib-serde_json
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-serde_json
+¦       ¦   ¦       lib-serde_json.json
+¦       ¦   ¦       
+¦       ¦   +---serde_json-a97d5da618dc23ad
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---sha2-a99bdabacf09fcc9
+¦       ¦   ¦       dep-lib-sha2
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-sha2
+¦       ¦   ¦       lib-sha2.json
+¦       ¦   ¦       
+¦       ¦   +---simd-adler32-0c395fade40bc704
+¦       ¦   ¦       dep-lib-simd_adler32
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-simd_adler32
+¦       ¦   ¦       lib-simd_adler32.json
+¦       ¦   ¦       
+¦       ¦   +---subtle-99315a87cd0993c3
+¦       ¦   ¦       dep-lib-subtle
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-subtle
+¦       ¦   ¦       lib-subtle.json
+¦       ¦   ¦       
+¦       ¦   +---syn-6139e8c96d897fe1
+¦       ¦   ¦       dep-lib-syn
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-syn
+¦       ¦   ¦       lib-syn.json
+¦       ¦   ¦       
+¦       ¦   +---typenum-aadd3e6a751d05d6
+¦       ¦   ¦       dep-lib-typenum
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-typenum
+¦       ¦   ¦       lib-typenum.json
+¦       ¦   ¦       
+¦       ¦   +---unicode-ident-b8584a1c61d0c9de
+¦       ¦   ¦       dep-lib-unicode_ident
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-unicode_ident
+¦       ¦   ¦       lib-unicode_ident.json
+¦       ¦   ¦       
+¦       ¦   +---universal-hash-0b2a9e1fdc644e69
+¦       ¦   ¦       dep-lib-universal_hash
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-universal_hash
+¦       ¦   ¦       lib-universal_hash.json
+¦       ¦   ¦       
+¦       ¦   +---version_check-6a3d63b7ad17ff37
+¦       ¦   ¦       dep-lib-version_check
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-version_check
+¦       ¦   ¦       lib-version_check.json
+¦       ¦   ¦       
+¦       ¦   +---zmij-3d198d08c2cd4f8a
+¦       ¦   ¦       run-build-script-build-script-build
+¦       ¦   ¦       run-build-script-build-script-build.json
+¦       ¦   ¦       
+¦       ¦   +---zmij-da4a5bf18b0e3125
+¦       ¦   ¦       dep-lib-zmij
+¦       ¦   ¦       invoked.timestamp
+¦       ¦   ¦       lib-zmij
+¦       ¦   ¦       lib-zmij.json
+¦       ¦   ¦       
+¦       ¦   +---zmij-eed6bb5c71c898bb
+¦       ¦           build-script-build-script-build
+¦       ¦           build-script-build-script-build.json
+¦       ¦           dep-build-script-build-script-build
+¦       ¦           invoked.timestamp
+¦       ¦           
+¦       +---build
+¦       ¦   +---crc32fast-757f2ed9d701a4f3
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-757f2ed9d701a4f3.d
+¦       ¦   ¦       build_script_build-757f2ed9d701a4f3.exe
+¦       ¦   ¦       build_script_build-757f2ed9d701a4f3.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---crc32fast-c76f1b8ab8e4bacd
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---generic-array-9cc9e8355b3493db
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---generic-array-f5b1d73b275d8739
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-f5b1d73b275d8739.d
+¦       ¦   ¦       build_script_build-f5b1d73b275d8739.exe
+¦       ¦   ¦       build_script_build-f5b1d73b275d8739.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---getrandom-62ca3bce9bbb1c94
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-62ca3bce9bbb1c94.d
+¦       ¦   ¦       build_script_build-62ca3bce9bbb1c94.exe
+¦       ¦   ¦       build_script_build-62ca3bce9bbb1c94.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---getrandom-7880cb82b94b4f19
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---proc-macro2-43ad213c06778a44
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---proc-macro2-98f98eb5f6ded1d2
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-98f98eb5f6ded1d2.d
+¦       ¦   ¦       build_script_build-98f98eb5f6ded1d2.exe
+¦       ¦   ¦       build_script_build-98f98eb5f6ded1d2.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---quote-32cf4c0f88e8a600
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-32cf4c0f88e8a600.d
+¦       ¦   ¦       build_script_build-32cf4c0f88e8a600.exe
+¦       ¦   ¦       build_script_build-32cf4c0f88e8a600.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---quote-e9e9afa3c0b73ef4
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---serde-583dc03262ad7390
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-583dc03262ad7390.d
+¦       ¦   ¦       build_script_build-583dc03262ad7390.exe
+¦       ¦   ¦       build_script_build-583dc03262ad7390.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---serde-eb1f262076f7e875
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   ¦           private.rs
+¦       ¦   ¦           
+¦       ¦   +---serde_core-3dc2301fb74f9443
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   ¦           private.rs
+¦       ¦   ¦           
+¦       ¦   +---serde_core-cc20e9fb6a510b32
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-cc20e9fb6a510b32.d
+¦       ¦   ¦       build_script_build-cc20e9fb6a510b32.exe
+¦       ¦   ¦       build_script_build-cc20e9fb6a510b32.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---serde_json-68658ca5f4c1b188
+¦       ¦   ¦       build-script-build.exe
+¦       ¦   ¦       build_script_build-68658ca5f4c1b188.d
+¦       ¦   ¦       build_script_build-68658ca5f4c1b188.exe
+¦       ¦   ¦       build_script_build-68658ca5f4c1b188.pdb
+¦       ¦   ¦       build_script_build.pdb
+¦       ¦   ¦       
+¦       ¦   +---serde_json-a97d5da618dc23ad
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---zmij-3d198d08c2cd4f8a
+¦       ¦   ¦   ¦   invoked.timestamp
+¦       ¦   ¦   ¦   output
+¦       ¦   ¦   ¦   root-output
+¦       ¦   ¦   ¦   stderr
+¦       ¦   ¦   ¦   
+¦       ¦   ¦   +---out
+¦       ¦   +---zmij-eed6bb5c71c898bb
+¦       ¦           build-script-build.exe
+¦       ¦           build_script_build-eed6bb5c71c898bb.d
+¦       ¦           build_script_build-eed6bb5c71c898bb.exe
+¦       ¦           build_script_build-eed6bb5c71c898bb.pdb
+¦       ¦           build_script_build.pdb
+¦       ¦           
+¦       +---deps
+¦       ¦       adler2-6af71995eb2bc9cc.d
+¦       ¦       aead-bbccdb1dd713c159.d
+¦       ¦       aes-5becd472e60e8bde.d
+¦       ¦       aes_gcm-d7ecdab20ea50e7f.d
+¦       ¦       block_buffer-41f5f783090671ce.d
+¦       ¦       cfg_if-a6d390c06a308e4b.d
+¦       ¦       chacha20-47ea593b4c8ac315.d
+¦       ¦       cipher-050aefec84289409.d
+¦       ¦       cpufeatures-43f58f326ed10c59.d
+¦       ¦       cpufeatures-850dff4571646451.d
+¦       ¦       crc32fast-a96b8d61a0248e2b.d
+¦       ¦       crypto_common-ead685d7458f2c84.d
+¦       ¦       ctr-101e3d1ceb04ad59.d
+¦       ¦       digest-9c6551df3d715ff6.d
+¦       ¦       flate2-eea9604ba69788e4.d
+¦       ¦       generic_array-29debd4506a9162e.d
+¦       ¦       getrandom-8f17f7883a726835.d
+¦       ¦       getrandom-d64de5b959126648.d
+¦       ¦       ghash-611b0e34b85fed10.d
+¦       ¦       hmac-b25323a7197a9fc9.d
+¦       ¦       inout-e0df4deb7241888f.d
+¦       ¦       itoa-749974bbc94b8860.d
+¦       ¦       libadler2-6af71995eb2bc9cc.rlib
+¦       ¦       libadler2-6af71995eb2bc9cc.rmeta
+¦       ¦       libaead-bbccdb1dd713c159.rlib
+¦       ¦       libaead-bbccdb1dd713c159.rmeta
+¦       ¦       libaes-5becd472e60e8bde.rlib
+¦       ¦       libaes-5becd472e60e8bde.rmeta
+¦       ¦       libaes_gcm-d7ecdab20ea50e7f.rlib
+¦       ¦       libaes_gcm-d7ecdab20ea50e7f.rmeta
+¦       ¦       libblock_buffer-41f5f783090671ce.rlib
+¦       ¦       libblock_buffer-41f5f783090671ce.rmeta
+¦       ¦       libcfg_if-a6d390c06a308e4b.rlib
+¦       ¦       libcfg_if-a6d390c06a308e4b.rmeta
+¦       ¦       libchacha20-47ea593b4c8ac315.rlib
+¦       ¦       libchacha20-47ea593b4c8ac315.rmeta
+¦       ¦       libcipher-050aefec84289409.rlib
+¦       ¦       libcipher-050aefec84289409.rmeta
+¦       ¦       libcpufeatures-43f58f326ed10c59.rlib
+¦       ¦       libcpufeatures-43f58f326ed10c59.rmeta
+¦       ¦       libcpufeatures-850dff4571646451.rlib
+¦       ¦       libcpufeatures-850dff4571646451.rmeta
+¦       ¦       libcrc32fast-a96b8d61a0248e2b.rlib
+¦       ¦       libcrc32fast-a96b8d61a0248e2b.rmeta
+¦       ¦       libcrypto_common-ead685d7458f2c84.rlib
+¦       ¦       libcrypto_common-ead685d7458f2c84.rmeta
+¦       ¦       libctr-101e3d1ceb04ad59.rlib
+¦       ¦       libctr-101e3d1ceb04ad59.rmeta
+¦       ¦       libdigest-9c6551df3d715ff6.rlib
+¦       ¦       libdigest-9c6551df3d715ff6.rmeta
+¦       ¦       libflate2-eea9604ba69788e4.rlib
+¦       ¦       libflate2-eea9604ba69788e4.rmeta
+¦       ¦       libgeneric_array-29debd4506a9162e.rlib
+¦       ¦       libgeneric_array-29debd4506a9162e.rmeta
+¦       ¦       libgetrandom-8f17f7883a726835.rlib
+¦       ¦       libgetrandom-8f17f7883a726835.rmeta
+¦       ¦       libgetrandom-d64de5b959126648.rlib
+¦       ¦       libgetrandom-d64de5b959126648.rmeta
+¦       ¦       libghash-611b0e34b85fed10.rlib
+¦       ¦       libghash-611b0e34b85fed10.rmeta
+¦       ¦       libhmac-b25323a7197a9fc9.rlib
+¦       ¦       libhmac-b25323a7197a9fc9.rmeta
+¦       ¦       libinout-e0df4deb7241888f.rlib
+¦       ¦       libinout-e0df4deb7241888f.rmeta
+¦       ¦       libitoa-749974bbc94b8860.rlib
+¦       ¦       libitoa-749974bbc94b8860.rmeta
+¦       ¦       libmemchr-a05ea49fbb5a505f.rlib
+¦       ¦       libmemchr-a05ea49fbb5a505f.rmeta
+¦       ¦       libminiz_oxide-4961b8483cbddf72.rlib
+¦       ¦       libminiz_oxide-4961b8483cbddf72.rmeta
+¦       ¦       libopaque_debug-30aae6611a47f69f.rlib
+¦       ¦       libopaque_debug-30aae6611a47f69f.rmeta
+¦       ¦       libpbkdf2-3bf3b5e9cb1c8e13.rlib
+¦       ¦       libpbkdf2-3bf3b5e9cb1c8e13.rmeta
+¦       ¦       libpolyval-8ebcd119da719324.rlib
+¦       ¦       libpolyval-8ebcd119da719324.rmeta
+¦       ¦       libproc_macro2-ac267a6d6c6c7a4b.rlib
+¦       ¦       libproc_macro2-ac267a6d6c6c7a4b.rmeta
+¦       ¦       libquote-f9772c70c5822f10.rlib
+¦       ¦       libquote-f9772c70c5822f10.rmeta
+¦       ¦       librand-e33e35196ab02ed9.rlib
+¦       ¦       librand-e33e35196ab02ed9.rmeta
+¦       ¦       librand_core-05e2c129a30273c3.rlib
+¦       ¦       librand_core-05e2c129a30273c3.rmeta
+¦       ¦       librand_core-fe02e76bef4fa032.rlib
+¦       ¦       librand_core-fe02e76bef4fa032.rmeta
+¦       ¦       librna2_pm.rlib
+¦       ¦       libserde-f0f796d88abc358f.rlib
+¦       ¦       libserde-f0f796d88abc358f.rmeta
+¦       ¦       libserde_core-4549c2c6ebfde947.rlib
+¦       ¦       libserde_core-4549c2c6ebfde947.rmeta
+¦       ¦       libserde_json-a00bfdba3faeedb1.rlib
+¦       ¦       libserde_json-a00bfdba3faeedb1.rmeta
+¦       ¦       libsha2-a99bdabacf09fcc9.rlib
+¦       ¦       libsha2-a99bdabacf09fcc9.rmeta
+¦       ¦       libsimd_adler32-0c395fade40bc704.rlib
+¦       ¦       libsimd_adler32-0c395fade40bc704.rmeta
+¦       ¦       libsubtle-99315a87cd0993c3.rlib
+¦       ¦       libsubtle-99315a87cd0993c3.rmeta
+¦       ¦       libsyn-6139e8c96d897fe1.rlib
+¦       ¦       libsyn-6139e8c96d897fe1.rmeta
+¦       ¦       libtypenum-aadd3e6a751d05d6.rlib
+¦       ¦       libtypenum-aadd3e6a751d05d6.rmeta
+¦       ¦       libunicode_ident-b8584a1c61d0c9de.rlib
+¦       ¦       libunicode_ident-b8584a1c61d0c9de.rmeta
+¦       ¦       libuniversal_hash-0b2a9e1fdc644e69.rlib
+¦       ¦       libuniversal_hash-0b2a9e1fdc644e69.rmeta
+¦       ¦       libversion_check-6a3d63b7ad17ff37.rlib
+¦       ¦       libversion_check-6a3d63b7ad17ff37.rmeta
+¦       ¦       libzmij-da4a5bf18b0e3125.rlib
+¦       ¦       libzmij-da4a5bf18b0e3125.rmeta
+¦       ¦       memchr-a05ea49fbb5a505f.d
+¦       ¦       miniz_oxide-4961b8483cbddf72.d
+¦       ¦       opaque_debug-30aae6611a47f69f.d
+¦       ¦       pbkdf2-3bf3b5e9cb1c8e13.d
+¦       ¦       polyval-8ebcd119da719324.d
+¦       ¦       proc_macro2-ac267a6d6c6c7a4b.d
+¦       ¦       quote-f9772c70c5822f10.d
+¦       ¦       rand-e33e35196ab02ed9.d
+¦       ¦       rand_core-05e2c129a30273c3.d
+¦       ¦       rand_core-fe02e76bef4fa032.d
+¦       ¦       rna2_pm.d
+¦       ¦       rna2_pm.dll
+¦       ¦       rna2_pm.dll.exp
+¦       ¦       rna2_pm.dll.lib
+¦       ¦       rna2_pm.pdb
+¦       ¦       rna2_pm_cli.d
+¦       ¦       rna2_pm_cli.exe
+¦       ¦       rna2_pm_cli.pdb
+¦       ¦       serde-f0f796d88abc358f.d
+¦       ¦       serde_core-4549c2c6ebfde947.d
+¦       ¦       serde_derive-bcc5baa4ebc60d7d.d
+¦       ¦       serde_derive-bcc5baa4ebc60d7d.dll
+¦       ¦       serde_derive-bcc5baa4ebc60d7d.dll.exp
+¦       ¦       serde_derive-bcc5baa4ebc60d7d.dll.lib
+¦       ¦       serde_derive-bcc5baa4ebc60d7d.pdb
+¦       ¦       serde_json-a00bfdba3faeedb1.d
+¦       ¦       sha2-a99bdabacf09fcc9.d
+¦       ¦       simd_adler32-0c395fade40bc704.d
+¦       ¦       subtle-99315a87cd0993c3.d
+¦       ¦       syn-6139e8c96d897fe1.d
+¦       ¦       typenum-aadd3e6a751d05d6.d
+¦       ¦       unicode_ident-b8584a1c61d0c9de.d
+¦       ¦       universal_hash-0b2a9e1fdc644e69.d
+¦       ¦       version_check-6a3d63b7ad17ff37.d
+¦       ¦       zmij-da4a5bf18b0e3125.d
+¦       ¦       
+¦       +---examples
+¦       +---incremental
++---test_dir
+¦   ¦   file1.txt
+¦   ¦   
+¦   +---subfolder
+¦           file2.txt
+¦           
++---test_sample_data
+¦   ¦   file1.txt
+¦   ¦   
+¦   +---subfolder
+¦           file2.txt
+¦           
++---__pycache__
+        rna2_engine.cpython-312.pyc
+        
